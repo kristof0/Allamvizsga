@@ -1,0 +1,210 @@
+group 'ALLAMVIZSGA_VIZ'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+maven {url "http://maven.imagej.net/content/repositories/public/"}
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://mvnrepository.com/artifact/com.drewnoakes/metadata-extractor"}
+    maven{ url "https://mvnrepository.com/artifact/com.github.zengde/lire" }
+    maven{ url "https://mvnrepository.com/artifact/org.elasticsearch.gradle/build-tools" }
+    maven {
+        url 'http://s3.amazonaws.com/download.elasticsearch.org/lucenesnapshots/00142c9'
+    }
+    maven { url"https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser"}
+}
+configurations {
+    compile5
+    compile6
+}
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+
+    // https://mvnrepository.com/artifact/com.github.haifengl/smile-core
+    //implementation group: 'com.github.haifengl', name: 'smile-core', version: '2.5.3'
+
+    // https://mvnrepository.com/artifact/org.bytedeco/openblas-platform
+    //  implementation group: 'org.bytedeco', name: 'openblas-platform', version: '0.3.10-1.5.4'
+    // https://mvnrepository.com/artifact/org.bytedeco/arpack-ng-platform
+  //  implementation group: 'org.bytedeco', name: 'arpack-ng-platform', version: '3.7.0-1.5.4'
+//t-sne
+// https://mvnrepository.com/artifact/org.nd4j/nd4j-native-platform
+    implementation group: 'org.nd4j', name: 'nd4j-native-platform', version: '1.0.0-beta7'
+
+
+
+// https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-tsne
+    implementation group: 'org.deeplearning4j', name: 'deeplearning4j-tsne', version: '1.0.0-beta7'
+
+    //OBJECT DETECTION
+// https://mvnrepository.com/artifact/ai.djl.pytorch/pytorch-model-zoo
+    implementation group: 'ai.djl.pytorch', name: 'pytorch-model-zoo', version: '0.4.0'
+
+// https://mvnrepository.com/artifact/ai.djl.pytorch/pytorch-native-auto
+    runtimeOnly group: 'ai.djl.pytorch', name: 'pytorch-native-auto', version: '1.4.0'
+
+// https://mvnrepository.com/artifact/ai.djl.pytorch/pytorch-native-cu102
+    implementation group: 'ai.djl.pytorch', name: 'pytorch-native-cu102', version: '1.5.0'
+
+
+
+    //MONGO
+    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-async
+    implementation group: 'org.mongodb', name: 'mongodb-driver-async', version: '3.4.3'
+    implementation group: 'org.mongodb', name: 'mongodb-driver-core', version: '3.4.3'
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.7'
+
+    //ELASTICSEARCH
+   // compile "org.elasticsearch.client:transport:6.2.3"
+    ///metadata extractor
+    compile group: 'com.drewnoakes', name: 'metadata-extractor', version: '2.14.0'
+    //LWJGL
+    compile "org.lwjgl:lwjgl:3.1.6"
+    compile "org.lwjgl:lwjgl-assimp:3.1.6"
+    compile "org.lwjgl:lwjgl-bgfx:3.1.6"
+    compile "org.lwjgl:lwjgl-egl:3.1.6"
+    compile "org.lwjgl:lwjgl-glfw:3.1.6"
+    compile "org.lwjgl:lwjgl-jawt:3.1.6"
+    compile "org.lwjgl:lwjgl-jemalloc:3.1.6"
+    compile "org.lwjgl:lwjgl-lmdb:3.1.6"
+    compile "org.lwjgl:lwjgl-lz4:3.1.6"
+    compile "org.lwjgl:lwjgl-nanovg:3.1.6"
+    compile "org.lwjgl:lwjgl-nfd:3.1.6"
+    compile "org.lwjgl:lwjgl-nuklear:3.1.6"
+    compile "org.lwjgl:lwjgl-odbc:3.1.6"
+    compile "org.lwjgl:lwjgl-openal:3.1.6"
+    compile "org.lwjgl:lwjgl-opencl:3.1.6"
+    compile "org.lwjgl:lwjgl-opengl:3.1.6"
+    compile "org.lwjgl:lwjgl-opengles:3.1.6"
+    compile "org.lwjgl:lwjgl-openvr:3.1.6"
+    compile "org.lwjgl:lwjgl-ovr:3.1.6"
+    compile "org.lwjgl:lwjgl-par:3.1.6"
+    compile "org.lwjgl:lwjgl-remotery:3.1.6"
+    compile "org.lwjgl:lwjgl-rpmalloc:3.1.6"
+    compile "org.lwjgl:lwjgl-sse:3.1.6"
+    compile "org.lwjgl:lwjgl-stb:3.1.6"
+    compile "org.lwjgl:lwjgl-tinyexr:3.1.6"
+    compile "org.lwjgl:lwjgl-tinyfd:3.1.6"
+    compile "org.lwjgl:lwjgl-tootle:3.1.6"
+    compile "org.lwjgl:lwjgl-vulkan:3.1.6"
+    compile "org.lwjgl:lwjgl-xxhash:3.1.6"
+    compile "org.lwjgl:lwjgl-yoga:3.1.6"
+    compile "org.lwjgl:lwjgl-zstd:3.1.6"
+    compile "org.lwjgl:lwjgl:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-assimp:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-bgfx:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-glfw:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-jemalloc:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-lmdb:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-lz4:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-nanovg:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-nfd:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-nuklear:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-openal:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-opengl:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-opengles:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-openvr:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-ovr:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-par:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-remotery:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-rpmalloc:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-sse:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-stb:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-tinyexr:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-tinyfd:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-tootle:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-xxhash:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-yoga:3.1.6:natives-windows"
+    compile "org.lwjgl:lwjgl-zstd:3.1.6:natives-windows"
+    compile "org.joml:joml:1.9.9"
+    compile "com.code-disaster.steamworks4j:steamworks4j:1.7.0"
+    compile "com.code-disaster.steamworks4j:steamworks4j-server:1.7.0"
+
+//LIREEE
+    compile5 group:'org.apache.lucene', name: 'lucene-core', version: '6.4.0'
+    //compile group: 'org.apache.lucene', name: 'lucene-core', version: '8.7.0'
+    compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '6.4.0'
+
+    compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '6.4.0'
+    //compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '8.7.0'
+
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    // https://mvnrepository.com/artifact/com.sangupta/jopensurf
+    compile group: 'com.sangupta', name: 'jopensurf', version: '1.0.0'
+
+    // https://mvnrepository.com/artifact/com.drewnoakes/metadata-extractor
+    compile group: 'com.drewnoakes', name: 'metadata-extractor', version: '2.9.1'
+    // compile group: 'com.drewnoakes', name: 'metadata-extractor', version: '2.3.1'
+
+    // https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv
+    // compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '2.4.11-0.11'
+    compile fileTree(dir: 'lib', include: '*.jar')
+    // runtime fileTree(dir: 'lib', include: '*.jar')
+
+
+///LIREEE
+
+    compile fileTree(dir: 'libs', include: '*.jar')
+    //compile files('libs/*')
+   // compile files('libs/')
+    //compile files('build-tools-6.2.2.jar')
+
+    //compile group: 'com.github.zengde', name: 'lire', version: '1.0b2'
+   // compile 'org.apache.lucene:lucene-backward-codecs:5.4.0'
+    //compile group: 'org.elasticsearch.gradle', name: 'build-tools', version: '6.2.4'
+
+   // compile group: 'org.elasticsearch', name: 'elasticsearch', version: '6.2.4'
+   // compile group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '6.2.4'
+    //compile group: 'org.elasticsearch.client', name: 'transport', version: '6.2.4'
+
+   // compile group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '6.2.4'
+    //compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.9.1'
+    //compile6 group:'org.apache.lucene', name: 'lucene-core', version: '7.3.1'
+
+
+}
+task libs(type: Sync) {
+    from configurations.compile5
+    from configurations.compile6
+    into "$buildDir/libs"
+}
+task runIndexing(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'net.semanticmetadata.lire.sampleapp.ParallelIndexing'
+
+    // Define the directory where to find the images to index.
+    args 'D:/Temp/twd'
+}
+
+task runSearch(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'net.semanticmetadata.lire.sampleapp.Searcher'
+
+    // Define the image to be used as query
+    args 'D:/Temp/twd/frame0001.jpg'
+}
+
+/**
+ * Based on a suggestion by Nelson Silva from the lire-dev group.
+ */
+task runIndexLocalSLocalFeat(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    // define where to find all the .so or .dll files needed
+    systemProperty "java.library.path", "/home/user/Documents/LIRE/LIREGit_latest/LIRE/samples/simpleapplication/lib"
+
+    main = 'net.semanticmetadata.lire.sampleapp.IndexingAndSearchWithLocalFeatures'
+
+    // Define the directory where to find the images to index.
+    //args '/home/user/Documents/images/'
+}
+

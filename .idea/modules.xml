@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.iml" group="ALLAMVIZSGA_VIZ" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_main.iml" group="ALLAMVIZSGA_VIZ" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_test.iml" group="ALLAMVIZSGA_VIZ" />
+    </modules>
+  </component>
+</project>

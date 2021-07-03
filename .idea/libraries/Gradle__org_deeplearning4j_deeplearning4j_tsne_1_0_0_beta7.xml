@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.deeplearning4j:deeplearning4j-tsne:1.0.0-beta7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.deeplearning4j/deeplearning4j-tsne/1.0.0-beta7/50c44d718a2eb2f7dad7c5f4f02d4fe57c98bc4b/deeplearning4j-tsne-1.0.0-beta7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.deeplearning4j/deeplearning4j-tsne/1.0.0-beta7/5ebae882b62ddde2bcb27bd6dd56f61b314f57ba/deeplearning4j-tsne-1.0.0-beta7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+    <children>
+        <MenuBar layoutY="-2.0">
+            <menus>
+                <Menu fx:id="menuOpen" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuItemOpenOnClick" text="Open" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ProgressBar fx:id="progressBar" layoutX="202.0" layoutY="18.0" prefWidth="200.0" progress="0.0" />
+        <Button fx:id="reorderButton" layoutX="9.0" layoutY="242.0" mnemonicParsing="false" onAction="#reorderButtonOnClickListener" text="Reorder" />
+        <Button fx:id="resetCameraButton" layoutX="9.0" layoutY="281.0" mnemonicParsing="false" onAction="#resetCameraOnClick" text="Reset Camera" />
+        <Button fx:id="createNewVirtualCollectionButton" layoutX="9.0" layoutY="321.0" mnemonicParsing="false" onAction="#createNewVirtualCollectionButtonOnClick" text="Create new virtual collection" />
+        <Button fx:id="virtualCollectionWithObjectButton" layoutX="607.0" layoutY="242.0" mnemonicParsing="false" text="Mark images" onAction="#virtualCollectionWithObjectButtonOnClickListener" />
+
+        <ListView fx:id="collectionsListView" layoutY="75.0" onMouseClicked="#collectionsListViewOnClick" prefHeight="160.0" prefWidth="180.0" />
+        <ListView fx:id="virtualCollectionsListView" layoutX="200.0" layoutY="75.0" onMouseClicked="#virtulCollectionsListViewOnClick" prefHeight="158.0" prefWidth="180.0" />
+        <ListView fx:id="featuresListView" layoutX="400.0" layoutY="75.0" prefHeight="158.0" prefWidth="180.0" />
+        <ListView fx:id="detectedObjectListView" layoutX="600.0" layoutY="75.0" prefHeight="158.0" prefWidth="180.0" />
+
+        <Label layoutY="51.0" prefHeight="21.0" prefWidth="200.0" text="Collections" />
+        <Label layoutX="200.0" layoutY="51.0" prefHeight="21.0" prefWidth="200.0" text="Virtual Collections" />
+        <Label layoutX="400.0" layoutY="51.0" text="Features" />
+        <Label layoutX="600.0" layoutY="51.0" text="Detection" />
+
+        <Button fx:id="addSelectedImagesToVirtualCollectionButton" layoutX="9.0" layoutY="360.0" mnemonicParsing="false" onAction="#addSelectedImagesToVirtualCollectionButtonOnClick" text="Add Selected Images To Virtual Collection" />
+        <Button fx:id="removeSelectedImagesFromVirtualCollectionButton" layoutX="314.0" layoutY="360.0" mnemonicParsing="false" onAction="#removeSelectedImagesFromVirtualCollectionButtonOnClick" text="Remove Selected Images From Virtual Collection" />
+        <Button fx:id="reorderVirtualCollectionButton" layoutX="314.0" layoutY="242.0" mnemonicParsing="false" onAction="#reorderVirtualCollectionButtonOnClickListener" text="Reorder Virtual Collection" />
+        <Button fx:id="resetVirtualCollectionCameraButton" layoutX="314.0" layoutY="281.0" mnemonicParsing="false" onAction="#resetVirtualCollectionCameraOnClick" text="Reset Virtual Collection Camera" />
+        <Button fx:id="saveSelectedImagesFromVirtualCollectionButton" layoutX="314.0" layoutY="321.0" mnemonicParsing="false" onAction="#saveSelectedImagesFromVirtualCollectionButtonOnClick" text="Save Selected Images From Virtual Collection" />
+
+        <Button fx:id="deleteVirtualCollectionButton" layoutX="315.0" layoutY="398.0" mnemonicParsing="false" onAction="#deleteVirtualCollectionButtonOnClick" text="Delete Virtual Collection" />
+        <Button fx:id="deleteCollectionButton" layoutX="9.0" layoutY="398.0" mnemonicParsing="false" onAction="#deleteCollectionButtonOnClick" text="Delete Collection" />
+        <Button fx:id="closeCollectionButton" layoutX="9.0" layoutY="437.0" mnemonicParsing="false" onAction="#closeCollectionButtonOnClick" text="Close Collection" />
+        <Button fx:id="closeVirtualCollectionButton" layoutX="315.0" layoutY="437.0" mnemonicParsing="false" onAction="#closeVirtualCollectionButtonOnClick" text="Close Virtual Collection" />
+        <ComboBox fx:id="viewsList" layoutX="113.0" layoutY="242.0" prefWidth="150.0" promptText="Select View" />
+
+    </children>
+</Pane>

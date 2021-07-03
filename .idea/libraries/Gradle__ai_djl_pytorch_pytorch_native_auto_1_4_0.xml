@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.djl.pytorch:pytorch-native-auto:1.4.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ai.djl.pytorch/pytorch-native-auto/1.4.0/1dbfbe0006516a32ce81361b58f3a7b5fbf7edfe/pytorch-native-auto-1.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ai.djl.pytorch/pytorch-native-auto/1.4.0/4eed688d8e18fc49c15f58c8d718d5aab64e8e73/pytorch-native-auto-1.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

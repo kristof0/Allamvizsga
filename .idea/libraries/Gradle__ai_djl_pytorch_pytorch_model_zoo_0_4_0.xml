@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.djl.pytorch:pytorch-model-zoo:0.4.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ai.djl.pytorch/pytorch-model-zoo/0.4.0/9fc9a47be0e36a7fa115ace7e76eb4f4aae23373/pytorch-model-zoo-0.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ai.djl.pytorch/pytorch-model-zoo/0.4.0/e21fa9e4a26d0c9514c37044ee23ecfd86376262/pytorch-model-zoo-0.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

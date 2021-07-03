@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bytedeco:mkl:windows-x86_64:2020.1-1.5.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco/mkl/2020.1-1.5.3/4f1aaae724ee0b7a32b4a7c5fc50a6e1f6ebaf81/mkl-2020.1-1.5.3-windows-x86_64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco/mkl/2020.1-1.5.3/e1324abaf27754a79ee5f70e8868f082f7c8dbe0/mkl-2020.1-1.5.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
