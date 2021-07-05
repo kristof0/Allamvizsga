@@ -19,7 +19,7 @@ import static java.lang.StrictMath.abs;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT_SHIFT;
 
-public class CircleView implements IGameLogic {
+public class tSNEBasedView implements IGameLogic {
 
 
     private static final float MOUSE_SENSITIVITY = 0.2f;
@@ -62,7 +62,7 @@ public class CircleView implements IGameLogic {
     private int nonShowedImageNumber;
     private int[] reverseHelper;
     int[] offset;
-    public CircleView(IImageLoader textureLoader) {
+    public tSNEBasedView(IImageLoader textureLoader) {
         showed=new boolean[textureLoader.getNumberOfImages()];
         for(int i=0;i<showed.length;++i){
             showed[i]=true;
@@ -79,7 +79,7 @@ public class CircleView implements IGameLogic {
 
 
     }
-    public CircleView(IImageLoader textureLoader, int[] showedImages) {
+    public tSNEBasedView(IImageLoader textureLoader, int[] showedImages) {
         showed=new boolean[textureLoader.getNumberOfImages()];
         for(int i=0;i<showedImages.length;++i){
             showed[showedImages[i]]=true;
@@ -95,7 +95,7 @@ public class CircleView implements IGameLogic {
         this.textureLoader=textureLoader;
     }
 
-    public CircleView(IImageLoader textureLoader, TreeSet<Integer> showedImages) {
+    public tSNEBasedView(IImageLoader textureLoader, TreeSet<Integer> showedImages) {
 
 
         showed=new boolean[textureLoader.getNumberOfImages()];

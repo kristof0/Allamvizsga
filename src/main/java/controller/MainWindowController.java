@@ -25,7 +25,6 @@ import model.Collections.VirtualDirectoryCollection;
 import model.Config.Configuration;
 import model.Loaders.DefaultImageLoader;
 import net.semanticmetadata.lire.imageanalysis.features.global.*;
-import net.semanticmetadata.lire.imageanalysis.features.global.joint.JointHistogram;
 import org.apache.lucene.queryparser.classic.ParseException;
 import view.CollectionViews.*;
 import view.engine.GameEngine;
@@ -498,7 +497,7 @@ public class MainWindowController extends Observable implements Initializable, O
         if(this.getCurrentView()==SPIRAL3D_VIEW){gameLogic = new SpiralView3D(imageLoader);}
         if(this.getCurrentView()==GRID_VIEW) {gameLogic=new GridView(imageLoader);}
         if(this.getCurrentView()==TIMEHISTOGRAM_VIEW) {gameLogic=new DateTimeHistogram(imageLoader);}
-        if(this.getCurrentView()==TSNE_VIEW) {gameLogic=new CircleView(imageLoader);}
+        if(this.getCurrentView()==TSNE_VIEW) {gameLogic=new tSNEBasedView(imageLoader);}
         if(this.getCurrentView()==DISTANCE_VIEW) {gameLogic=new WaveView(imageLoader);}
         if(this.getCurrentView()==CIRCULARHIST3D_VIEW) {gameLogic=new CircularDateHistogram3D(imageLoader);}
         if(this.getCurrentView()==CIRCULARHIST2D_VIEW) {gameLogic=new CircularDateHistogram2D(imageLoader);}
@@ -681,7 +680,7 @@ public class MainWindowController extends Observable implements Initializable, O
         if(this.getCurrentView()==SPIRAL_VIEW){gameLogic = new SpiralView(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
         if(this.getCurrentView()==GRID_VIEW) {gameLogic=new GridView(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
         if(this.getCurrentView()==TIMEHISTOGRAM_VIEW) {gameLogic=new DateTimeHistogram(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
-        if(this.getCurrentView()==TSNE_VIEW) {gameLogic=new CircleView(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
+        if(this.getCurrentView()==TSNE_VIEW) {gameLogic=new tSNEBasedView(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
         if(this.getCurrentView()==DISTANCE_VIEW) {gameLogic=new WaveView(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
         if(this.getCurrentView()==CIRCULARHIST3D_VIEW) {gameLogic=new CircularDateHistogram3D(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}
         if(this.getCurrentView()==CIRCULARHIST2D_VIEW) {gameLogic=new CircularDateHistogram2D(virtualDirectoryCollection.getVirtualImageLoader(),virtualDirectoryCollection.getNeededImages());}

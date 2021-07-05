@@ -9,12 +9,7 @@ import org.deeplearning4j.plot.BarnesHutTsne;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.shade.guava.base.Stopwatch;
-import smile.manifold.LLE;
-import smile.manifold.TSNE;
-import smile.manifold.UMAP;
-import smile.math.matrix.Matrix;
-import smile.mds.MDS;
-import smile.mds.SammonMapping;
+
 
 import java.io.FileWriter;
 import java.io.IOException;

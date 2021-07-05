@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.iml" group="ALLAMVIZSGA_VIZ" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_main.iml" group="ALLAMVIZSGA_VIZ" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ_test.iml" group="ALLAMVIZSGA_VIZ" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ALLAMVIZSGA_VIZ.test.iml" />
     </modules>
   </component>
 </project>
