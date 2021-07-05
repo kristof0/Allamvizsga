@@ -236,9 +236,9 @@ public class DefaultImageLoader extends Observable implements Serializable,Obser
         notifyObservers(arg);
     }
 
-    public TreeSet<Integer> getImagesByOD(HashSet<String> strings) throws IOException, ParseException {
+    public TreeSet<Integer> getImagesByLabel(HashSet<String> strings) throws IOException, ParseException {
 
-         return standardLoader.getImagesByOD(strings);
+         return standardLoader.getImagesByLabel(strings);
     }
 
 

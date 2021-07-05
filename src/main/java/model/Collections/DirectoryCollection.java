@@ -154,7 +154,7 @@ public class DirectoryCollection extends Observable implements Observer,Comparab
 
 
     public HashSet<String> getIdentifiersForLabels(ArrayList<String> selectedObjectsArr) {
-        return this.DB.getImagesForLabels(selectedObjectsArr);
+        return this.DB.getIdentifiersForLabelsFromDb(selectedObjectsArr);
     }
 }
 

@@ -44,7 +44,7 @@ public class MongoApi {
     }
 
 
-    public HashSet<String> getImagesForLabels(ArrayList<String> labelList){
+    public HashSet<String> getIdentifiersForLabelsFromDb(ArrayList<String> labelList){
         labelCenteredColl=database.getCollection("LabelCenteredColl");
        //labelCenteredColl.createIndex(Indexes.text("label"), (result, t) -> { System.out.println("CreateIndex: "+result);});
 

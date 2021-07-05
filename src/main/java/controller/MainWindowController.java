@@ -95,7 +95,7 @@ public class MainWindowController extends Observable implements Initializable, O
     private HashMap<String,Class> features;
 
     @FXML
-    private Button virtualCollectionWithObjectButton;
+    private Button markImagesButton;
     @FXML
     private Button reorderButton;
     @FXML
@@ -285,14 +285,14 @@ public class MainWindowController extends Observable implements Initializable, O
     public void resetVirtualCollectionCameraOnClick(){
         currentState.resetVirtualCollectionCamera();
     }
-    public void virtualCollectionWithObjectButtonOnClickListener() throws IOException {
+    public void markImagesButtonOnClickListener() throws IOException {
         ObservableList<String> selectedObjects=detectedObjectListView.getSelectionModel().getSelectedItems();
         ArrayList<String> selectedObjectsArr=new ArrayList<>(selectedObjects);
 
         TreeSet<Integer> temp2=new TreeSet<>();
         HashSet<String> temptree=currentlyLoadedDirectoryCollection.getIdentifiersForLabels(selectedObjectsArr);
         try {
-            temp2=imageLoader.getImagesByOD(temptree);
+            temp2=imageLoader.getImagesByLabel(temptree);
 
         } catch (ParseException e) {
             e.printStackTrace();
@@ -649,7 +649,7 @@ public class MainWindowController extends Observable implements Initializable, O
         currentState.virtualDirectoryCollectionProcessed(collectionManager.createVirtualDirectoryCollection(
                 this.currentlyLoadedDirectoryCollection.getCollectionName(),
                 collectionName,
-                imageLoader.getImagesByOD(currentlyLoadedDirectoryCollection.getIdentifiersForLabels(selectedObjectsArr))
+                imageLoader.getImagesByLabel(currentlyLoadedDirectoryCollection.getIdentifiersForLabels(selectedObjectsArr))
         ));
 
         HashSet<String> names=currentlyLoadedDirectoryCollection.getVirtualCollectionNames();
@@ -876,8 +876,8 @@ public class MainWindowController extends Observable implements Initializable, O
         printCurrentState();
     }
 
-    public void enableVirtCollObjButton(){virtualCollectionWithObjectButton.setDisable(false);}
-    public void disableVirtCollObjButton(){virtualCollectionWithObjectButton.setDisable(true);}
+    public void enableVirtCollObjButton(){markImagesButton.setDisable(false);}
+    public void disableVirtCollObjButton(){markImagesButton.setDisable(true);}
 
     public void enableDetectedObjectsListView(){
         detectedObjectListView.setDisable(false);

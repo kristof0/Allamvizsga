@@ -1000,7 +1000,7 @@ public abstract class LoaderTemplate extends Observable implements Serializable,
         }).start();
     }
 
-    public  TreeSet<Integer> getImagesByOD(HashSet<String> strings) throws IOException, org.apache.lucene.queryparser.classic.ParseException {
+    public  TreeSet<Integer> getImagesByLabel(HashSet<String> strings) throws IOException, org.apache.lucene.queryparser.classic.ParseException {
 
         IndexReader ir = DirectoryReader.open(FSDirectory.open(Paths.get(savePath+"\\index")));
 

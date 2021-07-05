@@ -28,7 +28,7 @@
         <Button fx:id="reorderButton" layoutX="9.0" layoutY="242.0" mnemonicParsing="false" onAction="#reorderButtonOnClickListener" text="Reorder" />
         <Button fx:id="resetCameraButton" layoutX="9.0" layoutY="281.0" mnemonicParsing="false" onAction="#resetCameraOnClick" text="Reset Camera" />
         <Button fx:id="createNewVirtualCollectionButton" layoutX="9.0" layoutY="321.0" mnemonicParsing="false" onAction="#createNewVirtualCollectionButtonOnClick" text="Create new virtual collection" />
-        <Button fx:id="virtualCollectionWithObjectButton" layoutX="607.0" layoutY="242.0" mnemonicParsing="false" text="Mark images" onAction="#virtualCollectionWithObjectButtonOnClickListener" />
+        <Button fx:id="markImagesButton" layoutX="607.0" layoutY="242.0" mnemonicParsing="false" text="Mark images" onAction="#markImagesButtonOnClickListener" />
 
         <ListView fx:id="collectionsListView" layoutY="75.0" onMouseClicked="#collectionsListViewOnClick" prefHeight="160.0" prefWidth="180.0" />
         <ListView fx:id="virtualCollectionsListView" layoutX="200.0" layoutY="75.0" onMouseClicked="#virtulCollectionsListViewOnClick" prefHeight="158.0" prefWidth="180.0" />
