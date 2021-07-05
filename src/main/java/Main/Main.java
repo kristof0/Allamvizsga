@@ -220,33 +220,7 @@ public class Main extends Application {
 
 
 System.out.println(Integer.MAX_VALUE);
-        //readDxt1("C:\\Users\\Szabi\\Desktop\\AAAAAAAAAAA\\dxt1",50);
-       // dxtWriteTest("C:\\Users\\Szabi\\Desktop\\AAAAAAAAAAA\\icons",
-              //  "C:\\Users\\Szabi\\Desktop\\AAAAAAAAAAA\\dxt1",
-              //  10
-      //  );
-      /*  staticImageTest("C:\\Users\\Szabi\\Desktop\\AAAAAAAAAAA\\icons",
-                "C:\\Users\\Szabi\\Desktop\\AAAAAAAAAAA\\png",
-                "png",
-                10
-        );*/
-        //staticLoadTest("C:\\Users\\Szabi\\Desktop\\AAAAAAAAAAA\\bmp",50);
-
-/*        TransportClient client = new PreBuiltTransportClient(org.elasticsearch.common.settings.Settings.EMPTY);
-        try {
-            client.addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300));
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-
-        SearchResponse response = client.prepareSearch().get();
-        for (SearchHit hit : response.getHits().getHits()) {
-            System.out.println(hit.getIndex());
-        }
-
-
-
-        client.close();*/
+    
 
         launch(args);
     }
