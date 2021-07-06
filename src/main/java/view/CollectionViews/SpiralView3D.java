@@ -198,12 +198,7 @@ public class SpiralView3D implements IGameLogic{
         textureLoader.bindTextures();
         renderer.init(window);
 
-        // Create the Mesh
-        //TextureAtlas.getInstance().loadTextures("C:\\Users\\Szabi\\Desktop\\Munka\\Twitter_2016_Imgs");
-        //TextureAtlas.getInstance().loadTextureAtlas("C:\\Users\\Szabi\\Desktop\\torolheto");
-        //TODO ezt atirni
 
-        //TextureAtlas.getInstance().loadTextureAtlas("C:\\Users\\Szabi\\Desktop\\Allamvizsga\\Kepek\\Twitter_2015_Imgs_feldolgozott");
 
         numberOfImages=textureLoader.getNumberOfImages();
         gameItems = new GameItem[textureLoader.getNumberOfTextures()];
